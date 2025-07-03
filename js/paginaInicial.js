@@ -66,6 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (botao.classList.contains('historia')) {
                     window.location.href = 'historia.html';
                 } else if (botao.classList.contains('personagens')) {
+                    window.location.href = 'personagens.html';
 
                 } else if (botao.classList.contains('regioes')) {
 
