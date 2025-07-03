@@ -1,36 +1,80 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Mapa</title>
+    <meta charset="UTF-8">
+    <title>Mapa</title>
     <link rel="stylesheet" href="css/mapa.css">
 </head>
+
 <body>
 
-<div id="infoBox"></div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="historia.html">História</a></li>
+            <li><a href="personagens.html">Personagens</a></li>
+            <li><a href="mapa.html" class="ativo">Regiões</a></li>
+            <li><a href="Chefes.html">Chefes</a></li>
+        </ul>
+    </nav>
 
-<svg viewBox="0 0 800 449" xmlns="http://www.w3.org/2000/svg">
-  <!-- Imagem de fundo do mapa -->
-  <image href="img/NavMap.webp"
-         x="0" y="0" width="800" height="380" />
 
-  <!-- Caminho Verde -->
-  <rect x="200" y="100" width="90" height="40"
-        class="regiao"
-        data-regiao="Caminho Verde" />
+    <div id="infoBox"></div>
 
-  <!-- Cidade das Lágrimas -->
-  <rect x="425" y="175" width="90" height="50"
-        class="regiao"
-        data-regiao="Cidade das Lágrimas" />
+    <svg viewBox="0 0 800 449" xmlns="http://www.w3.org/2000/svg">
+        <!-- Imagem de fundo do mapa -->
+        <image href="img/NavMap.webp" x="0" y="0" width="800" height="360" />
 
-  <!-- Hidrovia Real -->
-  <rect x="435" y="250" width="70" height="35"
-        class="regiao"
-        data-regiao="Hidrovia Real" />
-</svg>
+        <!-- Caminho Verde -->
+        <rect x="210" y="90" width="90" height="40" class="regiao" data-regiao="Caminho Verde" />
 
-<script src="js/mapa.js"></script>
+        <!-- Canion -->
+        <rect x="250" y="145" width="90" height="20" class="regiao" data-regiao="Canion" />
+
+        <!-- Ermos -->
+        <rect x="315" y="180" width="60" height="30" class="regiao" data-regiao="Ermos" />
+
+        <!-- ninho -->
+        <rect x="215" y="235" width="60" height="30" class="regiao" data-regiao="Ninho" />
+
+        <!-- jardins -->
+        <rect x="150" y="165" width="90" height="30" class="regiao" data-regiao="jardins" />
+
+        <!-- Dirtmouth -->
+        <rect x="320" y="45" width="70" height="40" class="regiao" data-regiao="Dirtmouth" />
+
+        <!-- pico -->
+        <rect x="460" y="30" width="60" height="30" class="regiao" data-regiao="pico" />
+
+        <!-- Terra -->
+        <rect x="460" y="120" width="120" height="20" class="regiao" data-regiao="terra" />
+
+        <!-- Encruzilhada -->
+        <rect x="350" y="90" width="90" height="40" class="regiao" data-regiao="Encruzilhada" />
+
+        <!-- Penhascos Uivantes -->
+        <rect x="210" y="10" width="80" height="40" class="regiao" data-regiao="Penhascos" />
+
+        <!-- Cidade das Lágrimas -->
+        <rect x="425" y="170" width="90" height="50" class="regiao" data-regiao="Cidade das Lágrimas" />
+
+        <!-- borda -->
+        <rect x="590" y="210" width="60" height="40" class="regiao" data-regiao="borda" />
+
+        <!-- colmeia -->
+        <rect x="590" y="270" width="60" height="40" class="regiao" data-regiao="colmeia" />
+
+        <!-- bacia -->
+        <rect x="400" y="320" width="90" height="20" class="regiao" data-regiao="bacia" />
+
+        <!-- Hidrovia Real -->
+        <rect x="435" y="240" width="70" height="35" class="regiao" data-regiao="Hidrovia Real" />
+
+    </svg>
+
+    <script src="js/mapa.js"></script>
 
 </body>
+
 </html>

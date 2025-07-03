@@ -1,38 +1,61 @@
     body {
-      margin: 0;
-      background: black;
-      overflow: hidden;
+        margin: 0;
+        background: black;
+        overflow: hidden;
     }
+
     svg {
-      width: 100vw;
-      height: auto;
-      display: block;
+        width: 100vw;
+        height: auto;
+        display: block;
     }
 
     .regiao {
-      fill: transparent;
-      stroke: transparent;
-      stroke-width: 1;
-      transition: all 0.2s ease;
+        fill: transparent;
+        stroke: transparent;
+        stroke-width: 1;
+        transition: all 0.2s ease;
     }
 
     .regiao:hover {
-      stroke: white;
-      fill-opacity: 0.2;
-      cursor: pointer;
+        stroke: white;
+        fill-opacity: 0.2;
+        cursor: pointer;
     }
 
     #infoBox {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: #111;
-      color: white;
-      padding: 12px;
-      border: 1px solid #555;
-      border-radius: 8px;
-      max-width: 300px;
-      display: none;
-      font-family: sans-serif;
-      z-index: 1000;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: #111;
+        color: white;
+        padding: 12px;
+        border: 1px solid #555;
+        border-radius: 8px;
+        max-width: 300px;
+        display: none;
+        font-family: sans-serif;
+        z-index: 1000;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.6);
+        border-bottom: 1px solid #444;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #ccc;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+
+    nav a:hover,
+    .ativo {
+        color: #d4af37;
     }
