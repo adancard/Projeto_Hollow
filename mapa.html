@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Mapa</title>
+    <link rel="stylesheet" href="css/mapa.css">
+</head>
+<body>
+
+<div id="infoBox"></div>
+
+<svg viewBox="0 0 800 449" xmlns="http://www.w3.org/2000/svg">
+  <!-- Imagem de fundo do mapa -->
+  <image href="img/NavMap.webp"
+         x="0" y="0" width="800" height="380" />
+
+  <!-- Caminho Verde -->
+  <rect x="200" y="100" width="90" height="40"
+        class="regiao"
+        data-regiao="Caminho Verde" />
+
+  <!-- Cidade das Lágrimas -->
+  <rect x="425" y="175" width="90" height="50"
+        class="regiao"
+        data-regiao="Cidade das Lágrimas" />
+
+  <!-- Hidrovia Real -->
+  <rect x="435" y="250" width="70" height="35"
+        class="regiao"
+        data-regiao="Hidrovia Real" />
+</svg>
+
+<script src="js/mapa.js"></script>
+
+</body>
+</html>

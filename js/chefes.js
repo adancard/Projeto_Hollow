@@ -1,10 +1,10 @@
 const personagensPorTipo = {
-    Comerciantes: ['Confessora Jiji', 'Iselda', 'Come Pernas', 'Pequeno Tolo', 'Millibelle', 'Forjador de Ferrões', 'Lemm Colecionador de Relíquias', 'Salubra', 'Sly', 'Jinn Alma de Aço', 'O Último Besouro', 'Tuk'],
-    Mestres_do_Ferrao: ['Mestre do Ferrão Mato','Mestre do Ferrão Oro','Mestre do Ferrão Sheo'],
-    Viajantes:['Cloth','Cornifer','Hornet','Senhor Cogumelo','Quirrel','Tiso','Zote o Poderoso'],
-    NPCs_de_Missoes: ['Bretta','Os Sonhadores','A Pranteadora Cinzenta','Vidente','Pailarva'],
-    Diversos: ['bardoon','Aldeões Distantes','Defensor do Esterco','Inseto Ancião','Emilitia Eterna','fabricante de máscara','Parteira','Profeta Musgo','Myla','Xamã Caracol','O Caçador','O Rei Pálido','Unn','Dama Branca','Willoh'],
-    DLC: ['Grimm','brumm','Divina','Corcel Grimm','O Coração do Pesadelo','Nymm','Fluke Eremita']
+    chefes:['Receptáculo Quebrado','Mawlek Incubador','Guardião Cristalizado','Defensor do Esterco','Falso Cavaleiro','Flukemarm','Domador de Deuses','Mãe Mosca','Cavaleiro Vazio','Lordes Louva-a-Deus','Nosk','Mestre das Almas','O Colecionador','A Radiância','Lorde Traidor','Uumuu','Cavaleiros Vigilantes'],
+    Guerreiros_dos_Sonhos:['Ancião Hu','Galien','Gorb','Markoth','Marmu','Sem Olhos','Xero'],
+    Chefes_dos_Sonhos:['Campeão Fracassado','Parente Perdido','Tirano das Almas'],
+    Trupe_Grimm:['Grimm','Rei do Pesadelo'],
+    Sonhos_Escondidos:['Príncipe Cinza Zote','Defensor Branco'],
+    Sangue_Vital:['Cavaleiro da Colmeia']
   };
 
 const tipoSelect = document.getElementById('tipo');
@@ -65,17 +65,15 @@ personagemSelect.addEventListener('change', () => {
 function montarTabelaItem(itens) {
     let html = `<table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 600px; margin-top: 15px;">
     <thead>
-      <tr><th>Imagem</th><th>Item</th><th>Valor</th></tr>
+      <tr><th>Vida</th></tr>
     </thead>
     <tbody>`;
 
     for (const chave in itens) {
-        const { nome, valor, img } = itens[chave];
+        const { vida} = itens[chave];
         html += `
       <tr>
-        <td><img src="${img}" alt="${nome}" style="width:24px; height:24px;"></td>
-        <td>${nome}</td>
-        <td>${valor}</td>
+        <td>${vida}</td>
       </tr>
     `;
     }

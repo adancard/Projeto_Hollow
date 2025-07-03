@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chefes</title>
+    <link rel="stylesheet" href="css/chefes.css">
+    <link rel="shortcut icon" href="img/k2j6hos2opa81.png" type="image/x-icon">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="historia.html">História</a></li>
+            <li><a href="personagens.html">Personagens</a></li>
+            <li><a href="mapa.html">Regiões</a></li>
+            <li><a href="Chefes.html" class="ativo">Chefes</a></li>
+        </ul>
+    </nav>
+    
+     <label for="tipo">Escolha o tipo de personagem:</label>
+    <select id="tipo">
+        <option value="">-- Selecione um tipo --</option>
+        <option value="chefes">Chefes</option>
+        <option value="Guerreiros_dos_Sonhos">Guerreiros dos Sonhos</option>
+        <option value="Chefes_dos_Sonhos">Chefes dos Sonhos</option>
+        <option value="Trupe_Grimm">Trupe Grimm</option>
+        <option value="Sonhos_Escondidos">Sonhos Escondidos</option>
+        <option value="Sangue_Vital">Sangue Vital</option>
+    </select>
+
+    <br><br>
+
+    <label for="personagem">Escolha o personagem:</label>
+    <select id="personagem">
+        <option value="">-- Escolha o Chefe --</option>
+    </select>
+
+
+
+    <div id="ficha" class="ficha"></div>
+
+    <script src="js/fichaChefes.js"></script>
+    <script src="js/chefes.js"></script>
+
+</body>
+
+</html>

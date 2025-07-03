@@ -67,11 +67,10 @@ document.addEventListener('DOMContentLoaded', function () {
                     window.location.href = 'historia.html';
                 } else if (botao.classList.contains('personagens')) {
                     window.location.href = 'personagens.html';
-
                 } else if (botao.classList.contains('regioes')) {
-
+                    window.location.href = 'mapa.html';
                 } else if (botao.classList.contains('chefes')) {
-
+                    window.location.href = 'chefes.html';
                 }
             });
         });
