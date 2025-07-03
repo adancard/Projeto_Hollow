@@ -1,19 +1,63 @@
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Corpo da página */
 body {
     background-color: black;
     color: white;
-    body {
-    background-color: black;
-    color: white;
     transition: background-image 10s ease, background-color 10s ease;
+    font-family: 'Georgia', serif;
 }
 
-body::before {
+/* Logo responsiva */
+.logo-hollow {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Imagens (geral) — remover limite por altura da viewport que estava limitando a largura */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Container centralizado */
+.container {
+    text-align: center;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+/* Conteúdo centralizado */
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Efeitos de transição */
+.fadeOut {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s linear, visibility 0s 1s;
+}
+
+.fadeIn {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s linear;
+}
+
+/* Plano de fundo dinâmico */
+body::before,
+#bg-fundo {
     content: "";
     position: fixed;
     top: 0;
@@ -29,55 +73,7 @@ body::before {
     pointer-events: none;
 }
 
-#bg-fundo {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0;
-    transition: opacity 0.6s ease;
-    pointer-events: none;
-}
-
-}
-
-img {
-    max-width: 100vh;
-    max-height: 100vh;
-}
-
-.container {
-    text-align: center;
-    display: grid;
-    place-items: center;
-    height: 100vh;
-}
-
-.conteudo {
-    display: flex;
-    justify-content: center;
-}
-
-
-
-.fadeOut {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 1s linear, visibility 0s 1s;
-    /* A visibilidade muda APÓS a transição da opacidade */
-}
-
-.fadeIn {
-    visibility: visible;
-    opacity: 1;
-    transition: opacity 1s linear;
-}
-
+/* Botões */
 .opcoes {
     display: flex;
     flex-direction: column;
@@ -86,30 +82,70 @@ img {
 
 button {
     margin: 30px;
-    padding: 10px 20px;
+    padding: 15px 30px;
     border-radius: 5px;
     width: 300px;
     height: 60px;
-    border: none;
-
-        display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-
-    padding: 15px 30px;
+    border: 2px solid white;
     background: transparent;
     color: white;
-    border: 2px solid white;
     font-size: 24px;
-    font-family: 'Georgia', serif;
     text-transform: uppercase;
     letter-spacing: 2px;
     cursor: pointer;
-
     transition: all 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     position: relative;
 }
-button:hover{
+
+button:hover {
     background-color: rgb(27, 34, 161);
+}
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.navbar li a:hover {
+    color: #7faaff;
+}
+
+/* Responsividade da logo */
+@media (max-width: 600px) {
+    .logo-hollow {
+        max-width: 90%;
+        margin-top: 30px;
+    }
 }
