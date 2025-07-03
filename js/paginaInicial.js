@@ -1,6 +1,18 @@
 document.addEventListener('DOMContentLoaded', function () {
     const conteudo = document.querySelector(".conteudo");
 
+    const imagensParaPrecarregar = [
+        'https://images4.alphacoders.com/135/1356810.jpeg',
+        'https://i.redd.it/9olwosrsa3b31.png',
+        'https://images4.alphacoders.com/118/1184118.jpg',
+        'https://i.redd.it/chs0kqyb0r151.png'
+    ];
+
+    imagensParaPrecarregar.forEach(src => {
+        const img = new Image();
+        img.src = src;
+    });
+
     // Fade de carregamento inicial
     setTimeout(() => {
         conteudo.classList.add('fadeOut');
@@ -52,11 +64,11 @@ document.addEventListener('DOMContentLoaded', function () {
             botao.addEventListener('click', () => {
 
                 if (botao.classList.contains('historia')) {
-                   window.location.href = 'historia.html';
+                    window.location.href = 'historia.html';
                 } else if (botao.classList.contains('personagens')) {
-   
+
                 } else if (botao.classList.contains('regioes')) {
-                   
+
                 } else if (botao.classList.contains('chefes')) {
 
                 }
