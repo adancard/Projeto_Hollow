@@ -1,0 +1,81 @@
+body {
+    background-color: #0f0f0f;
+    /* Fundo bem escuro */
+    color: #f8f8f2;
+    /* Cor clara nos textos */
+    font-family: 'Georgia', serif;
+    line-height: 1.8;
+    padding: 40px;
+    max-width: 900px;
+    margin: auto;
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.1);
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images8.alphacoders.com/125/thumb-1920-1254807.jpg'); /* ou sua imagem */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2; /* controla a opacidade da imagem */
+    z-index: -1;
+}
+
+h1 {
+    font-family: 'hollow', cursive;
+    font-size: 3em;
+    text-align: center;
+    color: #c1b57b;
+    margin-bottom: 40px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+p {
+    margin-bottom: 20px;
+    text-indent: 2em;
+    font-size: 1.1em;
+    animation: fadein 2s ease-in;
+}
+
+@keyframes fadein {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+p:first-of-type::first-letter {
+    font-size: 2.8em;
+    font-weight: bold;
+    float: left;
+    line-height: 1;
+    padding-right: 10px;
+    color: #d4af37;
+    margin-top: 4px; /* esse valor pode ajustar a altura */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-bottom: 1px solid #444;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ccc;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover, .ativo {
+    color: #d4af37;
+}
+
+

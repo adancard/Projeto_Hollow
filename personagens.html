@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personagens</title>
+    <link rel="stylesheet" href="css/personagens.css">
+    <link rel="shortcut icon" href="img/k2j6hos2opa81.png" type="image/x-icon">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="historia.html">História</a></li>
+            <li><a href="personagens.html" class="ativo">Personagens</a></li>
+            <li><a href="mapa.html">Regiões</a></li>
+            <li><a href="Chefes.html">Chefes</a></li>
+        </ul>
+    </nav>
+
+    <label for="tipo">Escolha o tipo de personagem:</label>
+    <select id="tipo">
+        <option value="">-- Selecione um tipo --</option>
+        <option value="Comerciantes">Comerciantes</option>
+        <option value="Mestres_do_Ferrao">Mestres do Ferrão</option>
+        <option value="Viajantes">Viajantes</option>
+        <option value="NPCs_de_Missoes">NPCs de Missões</option>
+        <option value="Diversos">Diversos</option>
+        <option value="DLC">DLCS</option>
+    </select>
+
+    <br><br>
+
+    <label for="personagem">Escolha o personagem:</label>
+    <select id="personagem">
+        <option value="">-- Escolha um tipo primeiro --</option>
+    </select>
+
+
+
+    <div id="ficha" class="ficha"></div>
+
+    <script src="js/fichaDados.js"></script>
+    <script src="js/personagens.js"></script>
+
+</body>
+
+</html>
