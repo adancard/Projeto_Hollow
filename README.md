@@ -1,1 +1,1 @@
-Um site feito totalmente por mim por puro tédio
+Um site sobre o Jogo Hollow Knight
